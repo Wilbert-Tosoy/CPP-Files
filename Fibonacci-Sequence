@@ -1,0 +1,29 @@
+#include <iostream>
+
+//Fibonacci Sequence
+int main()
+{
+	
+	double a = 0, b = 1, i = 3, c, desiredNumber;
+
+	std::cout << "Type the desired number: ";
+	std::cin >> desiredNumber;
+
+	if (desiredNumber == 1) {
+		std::cout << a;
+	} else if (desiredNumber == 2) {
+		std::cout << a << " " << b;
+	}
+	else
+	{
+		while (i <= desiredNumber) {
+			c = a + b;
+			a = b;
+			b = c;
+			i++;
+			std::cout << c << " ";
+		}
+	}
+
+	return 0;
+}
