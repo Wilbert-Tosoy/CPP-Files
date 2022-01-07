@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main()
+{
+	int currentValue, val;
+
+	if (std::cin >> currentValue) {
+		int counter = 1;
+		while (std::cin >> val) {
+			if (val == currentValue) {
+				counter++;
+			}
+			else {
+				std::cout << currentValue << " occurs " << counter << " times." << std::endl;
+				currentValue = val;
+				counter = 1;
+			}
+		}
+		std::cout << currentValue << " occurs " << counter << " times." << std::endl;
+	}
+
+	return 0;
+}
