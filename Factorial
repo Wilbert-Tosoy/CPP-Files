@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main() {
+	double a, i, product;
+
+	std::cout << "Enter a number to be factored: ";
+	std::cin >> a;
+
+	i = a;
+	product = a;
+
+	if (a == 0) {
+		std::cout << "1" << std::endl;
+	}
+	else {
+		while (i > 1) {
+			i--;
+			product = product * i;
+			std::cout << product << " ";
+		}
+	}
+
+	return 0;
+}
