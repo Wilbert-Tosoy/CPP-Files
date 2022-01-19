@@ -1,0 +1,54 @@
+#include <iostream>
+
+double celsiusToFahrenheit(double c) {
+	double f;
+	f = ((c * 9) / 5) + 32;
+
+	return f;
+}
+
+double fahrenheitToCelsius(double f) {
+	double c;
+	c = (((f - 32) * 5) / 9);
+
+	return c;
+}
+
+int main() {
+	int select;
+	double number;
+
+	while (true) {
+		std::cout << "1. Celsuis - Fahrenheit Conversion\n2. Fahrenheit - Celsius Conversion\n";
+		std::cin >> select;
+
+		if (select) {
+			if (select == 1) {
+				std::cout << "Type number: ";
+				std::cin >> number;
+				if (number) {
+					std::cout << celsiusToFahrenheit(number) << std::endl;
+				}
+				else {
+					break;
+				}
+			}
+
+			if (select == 2) {
+				std::cout << "Type number: ";
+				std::cin >> number;
+				if (number) {
+					std::cout << fahrenheitToCelsius(number) << std::endl;
+				}
+				else {
+					break;
+				}
+			}
+		}
+		if (select != 1 && select != 2) {
+			break;
+		}
+	}
+	
+	return 0;
+}
