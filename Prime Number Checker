@@ -1,0 +1,31 @@
+#include <iostream>
+
+class primeChecker {
+public:
+	int number, i = 2;
+	primeChecker() {
+		std::cout << "Number: ";
+		std::cin >> number;
+
+		bool isPrime = true;
+		for (i; i < number; i++) {
+			if (number % i == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+
+		if (isPrime) {
+			std::cout << "Prime Number" << std::endl;
+		}
+		else {
+			std::cout << "Not Prime" << std::endl;
+		}
+	}
+};
+
+int main() {
+	primeChecker checker;
+
+	return 0;
+}
